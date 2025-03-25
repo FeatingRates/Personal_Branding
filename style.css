@@ -1,21 +1,20 @@
-/* Reset CSS */
+/* General Reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Arial', sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
 
 body {
-    background: #f8f9fa;
-    color: #333;
+    background: #1a1a2e;
+    color: white;
     line-height: 1.6;
 }
 
-/* Navbar */
+/* Navigation */
 nav {
-    background: #0073e6;
-    color: white;
+    background: #0f3460;
     padding: 15px 0;
     position: fixed;
     width: 100%;
@@ -28,7 +27,13 @@ nav .container {
     justify-content: space-between;
     align-items: center;
     width: 80%;
-    margin: 0 auto;
+    margin: auto;
+}
+
+nav .logo {
+    font-size: 22px;
+    font-weight: bold;
+    color: white;
 }
 
 nav ul {
@@ -43,25 +48,46 @@ nav ul li {
 nav ul li a {
     color: white;
     text-decoration: none;
-    font-weight: bold;
     transition: 0.3s;
 }
 
 nav ul li a:hover {
-    text-decoration: underline;
+    color: #00adb5;
 }
 
 /* Hero Section */
 .hero {
-    background: linear-gradient(135deg, #0073e6, #005bb5);
-    color: white;
+    background: url('hero-bg.jpg') no-repeat center center/cover;
     text-align: center;
     padding: 100px 20px;
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.hero h2 {
+    font-size: 36px;
+}
+
+.hero .btn {
+    background: #00adb5;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 15px;
+    transition: 0.3s;
+}
+
+.hero .btn:hover {
+    background: #005f73;
 }
 
 /* Sections */
 section {
-    background: white;
+    background: #16213e;
     margin: 20px auto;
     padding: 30px;
     width: 80%;
@@ -69,40 +95,23 @@ section {
     border-radius: 8px;
 }
 
-/* Project Grid */
-.project-grid {
-    display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
+/* Grid Layout */
+.project-grid, .skill-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
 }
 
-.project {
-    flex: 1;
-    background: #e3f2fd;
+.project, .skill-box {
+    background: #0f3460;
     padding: 15px;
     border-radius: 8px;
-}
-
-/* Skills Grid */
-.skill-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-    gap: 10px;
-    padding: 10px;
-}
-
-.skill-box {
-    background: #0073e6;
-    color: white;
-    padding: 10px;
     text-align: center;
-    border-radius: 5px;
 }
 
 /* Footer */
 footer {
-    background: #333;
-    color: white;
+    background: #0f3460;
     text-align: center;
     padding: 15px 0;
     margin-top: 20px;
@@ -113,8 +122,4 @@ footer .social-links a {
     margin: 0 10px;
     text-decoration: none;
     font-weight: bold;
-}
-
-footer .social-links a:hover {
-    text-decoration: underline;
 }
