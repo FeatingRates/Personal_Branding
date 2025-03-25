@@ -7,80 +7,96 @@
 }
 
 body {
-    background: #f4f4f4;
+    background: #f8f9fa;
     color: #333;
     line-height: 1.6;
 }
 
-/* Container */
-.container {
+/* Navbar */
+nav {
+    background: #0073e6;
+    color: white;
+    padding: 15px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+}
+
+nav .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     width: 80%;
     margin: 0 auto;
-    padding: 20px 0;
 }
 
-/* Header */
-header {
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Hero Section */
+.hero {
     background: linear-gradient(135deg, #0073e6, #005bb5);
     color: white;
-    padding: 40px 0;
     text-align: center;
-}
-
-header h1 {
-    font-size: 2.5em;
-    margin-bottom: 10px;
-}
-
-header p {
-    font-size: 1.2em;
-    font-weight: 300;
+    padding: 100px 20px;
 }
 
 /* Sections */
 section {
     background: white;
     margin: 20px auto;
-    padding: 20px;
+    padding: 30px;
     width: 80%;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
 }
 
-/* Project Section */
+/* Project Grid */
+.project-grid {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
 .project {
+    flex: 1;
     background: #e3f2fd;
     padding: 15px;
-    margin-top: 10px;
     border-radius: 8px;
 }
 
-/* Skill List */
-.skill-list {
-    display: flex;
-    flex-wrap: wrap;
+/* Skills Grid */
+.skill-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
     gap: 10px;
-    list-style: none;
-    padding: 0;
+    padding: 10px;
 }
 
-.skill-list li {
+.skill-box {
     background: #0073e6;
     color: white;
-    padding: 8px 15px;
-    border-radius: 20px;
-    font-size: 14px;
-}
-
-/* Links */
-a {
-    color: #0073e6;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-a:hover {
-    text-decoration: underline;
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
 }
 
 /* Footer */
@@ -90,4 +106,15 @@ footer {
     text-align: center;
     padding: 15px 0;
     margin-top: 20px;
+}
+
+footer .social-links a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer .social-links a:hover {
+    text-decoration: underline;
 }
