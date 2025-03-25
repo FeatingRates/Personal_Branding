@@ -3,79 +3,97 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Personal Branding - Adhyca Hafeez Wibowo</title>
+    <title>Personal Branding</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <header>
+    <!-- Navigation Bar -->
+    <nav>
         <div class="container">
             <h1>Adhyca Hafeez Wibowo</h1>
-            <p>Web Developer | Programmer</p>
+            <ul>
+                <li><a href="#about">Tentang</a></li>
+                <li><a href="#education">Pendidikan</a></li>
+                <li><a href="#projects">Proyek</a></li>
+                <li><a href="#skills">Keterampilan</a></li>
+                <li><a href="#contact">Kontak</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="container">
+            <h2>Web Developer | Programmer</h2>
+            <p>Membangun aplikasi berbasis web dengan teknologi modern.</p>
         </div>
     </header>
 
-    <section class="about">
+    <!-- Tentang Saya -->
+    <section id="about" class="about">
         <div class="container">
             <h2>Tentang Saya</h2>
-            <p>Halo, saya Adhyca, seorang Web Developer dengan pengalaman dalam pengembangan aplikasi berbasis web menggunakan PHP, CSS, dan JavaScript. Saya memiliki ketertarikan dalam teknologi web, sistem informasi, dan otomatisasi proses bisnis.</p>
+            <p>Saya Adhyca, seorang Web Developer yang berpengalaman dalam membangun aplikasi berbasis web dengan PHP, CSS, dan JavaScript.</p>
             <p><strong>Email:</strong> <a href="mailto:adhykarya@gmail.com">adhykarya@gmail.com</a></p>
             <p><strong>Lokasi:</strong> Oma Batam Center, Batam, Kepulauan Riau</p>
         </div>
     </section>
 
-    <section class="education">
+    <!-- Pendidikan -->
+    <section id="education" class="education">
         <div class="container">
             <h2>Pendidikan</h2>
             <ul>
-                <li><strong>Politeknik Negeri Batam</strong> - D4-Teknologi Rekayasa Perangkat Lunak (2024 - Sekarang)</li>
+                <li><strong>Politeknik Negeri Batam</strong> - Jurusan Teknik Informatika D4-Teknologi Rekayasa Perangkat Lunak (2024 - Sekarang)</li>
                 <li><strong>SMA Negeri 20 Batam</strong> - Jurusan IPS (2020 - 2024)</li>
             </ul>
         </div>
     </section>
 
-    <section class="projects">
+    <!-- Proyek -->
+    <section id="projects" class="projects">
         <div class="container">
             <h2>Proyek</h2>
-            <div class="project">
-                <h3>Proyek Aplikasi Peminjaman Ruang Meeting</h3>
-                <p>Aplikasi ini mempermudah reservasi dan manajemen ruang meeting, dilengkapi fitur pemesanan berdasarkan ketersediaan, manajemen jadwal, serta notifikasi.</p>
-            </div>
-            <div class="project">
-                <h3>Proyek Aplikasi Pengelolaan Surat di Polibatam</h3>
-                <p>Sistem ini menggantikan pengajuan surat via email, mendukung surat pengantar dan surat keterangan mahasiswa dengan pelacakan status yang lebih baik.</p>
+            <div class="project-grid">
+                <div class="project">
+                    <h3>Aplikasi Peminjaman Ruang Meeting</h3>
+                    <p>Aplikasi ini membantu manajemen ruang meeting dengan fitur pemesanan, notifikasi, dan manajemen jadwal.</p>
+                </div>
+                <div class="project">
+                    <h3>Aplikasi Pengelolaan Surat</h3>
+                    <p>Menggantikan sistem pengajuan surat via email dengan sistem digital yang lebih efisien.</p>
+                </div>
             </div>
         </div>
     </section>
 
-    <section class="skills">
+    <!-- Keterampilan -->
+    <section id="skills" class="skills">
         <div class="container">
             <h2>Keterampilan</h2>
-            <h3>Teknis:</h3>
-            <ul class="skill-list">
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>JavaScript</li>
-                <li>PHP</li>
-                <li>Python</li>
-                <li>MySQL</li>
-            </ul>
-            <h3>Non-Teknis:</h3>
-            <ul class="skill-list">
-                <li>Problem Solving</li>
-                <li>Adaptasi & Fleksibilitas</li>
-                <li>Komunikasi</li>
-                <li>Manajemen Waktu</li>
-            </ul>
+            <div class="skill-grid">
+                <div class="skill-box">HTML</div>
+                <div class="skill-box">CSS</div>
+                <div class="skill-box">JavaScript</div>
+                <div class="skill-box">PHP</div>
+                <div class="skill-box">Python</div>
+                <div class="skill-box">MySQL</div>
+                <div class="skill-box">Problem Solving</div>
+                <div class="skill-box">Adaptasi</div>
+
+            </div>
         </div>
     </section>
 
-    <footer>
+    <!-- Footer -->
+    <footer id="contact">
         <div class="container">
-            <p>Terhubung dengan saya: 
-                <a href="https://github.com/Featingrates" target="_blank">GitHub</a> |
-                <a href="https://linkedin.com/in/adhyca" target="_blank">LinkedIn</a>
-            </p>
+            <p>Terhubung dengan saya:</p>
+            <div class="social-links">
+                <a href="https://github.com/Featingrates" target="_blank">GitHub</a>
+                <a href="https://linkedin.com/in/" target="_blank">LinkedIn</a>
+            </div>
         </div>
     </footer>
 
