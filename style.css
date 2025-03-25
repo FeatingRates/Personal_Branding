@@ -1,51 +1,93 @@
-body {
-    font-family: Arial, sans-serif;
+/* Reset CSS */
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
     background: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Container */
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+/* Header */
+header {
+    background: linear-gradient(135deg, #0073e6, #005bb5);
+    color: white;
+    padding: 40px 0;
     text-align: center;
 }
 
-header {
-    background: #0073e6;
-    color: white;
-    padding: 20px;
+header h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
 }
 
-.about, .education, .projects, .skills {
+header p {
+    font-size: 1.2em;
+    font-weight: 300;
+}
+
+/* Sections */
+section {
     background: white;
     margin: 20px auto;
     padding: 20px;
     width: 80%;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
 }
 
-h1, h2 {
-    color: #333;
+/* Project Section */
+.project {
+    background: #e3f2fd;
+    padding: 15px;
+    margin-top: 10px;
+    border-radius: 8px;
 }
 
-ul {
+/* Skill List */
+.skill-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
     list-style: none;
     padding: 0;
 }
 
-ul li {
-    padding: 5px 0;
+.skill-list li {
+    background: #0073e6;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-size: 14px;
 }
 
+/* Links */
 a {
     color: #0073e6;
     text-decoration: none;
+    font-weight: bold;
 }
 
 a:hover {
     text-decoration: underline;
 }
 
+/* Footer */
 footer {
     background: #333;
     color: white;
-    padding: 10px;
+    text-align: center;
+    padding: 15px 0;
     margin-top: 20px;
 }
