@@ -8,16 +8,37 @@
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
-    background-color: #f4f4f4;
+    background-color: rgb(208, 217, 217);
     color: #333;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container .a {
+    margin-right: 30px;
 }
 
 /* Header */
 header {
     background: #3714ff;
     color: #fff;
-    padding: 20px 0;
-    text-align: center;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Memisahkan teks dan gambar */
+    padding-right: 20%;
+}
+
+.header-text {
+    flex: 1;
+    display: flex;
+    flex-direction: column; /* Menyusun teks ke atas bawah */
+    justify-content: center;
+    padding-left: 15%;
 }
 
 header h1 {
@@ -26,6 +47,28 @@ header h1 {
 
 header p {
     font-size: 1.2em;
+}
+
+/* Styling untuk foto profil */
+.profile-pic {
+    width: 120px; /* Ukuran foto */
+    height: 160px;
+    border-radius: 50%; /* Biar jadi lingkaran */
+    border: 3px solid white; /* Tambahkan border putih */
+}
+
+/* Styling foto pendidikan */
+.education-item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.edu-img {
+    width: 150px; /* Sesuaikan ukuran gambar */
+    height: auto;
+    border-radius: 8px;
 }
 
 /* Section */
@@ -37,9 +80,18 @@ section {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
+p {
+    margin-bottom: 20px;
+}
+
 h2 {
     color: #007bff;
     margin-bottom: 10px;
+}
+
+h5 {
+    margin-top: 20px;
+    font-weight: none;
 }
 
 /* List Styles */
@@ -48,17 +100,7 @@ ul {
 }
 
 li {
-    margin-bottom: 10px;
-}
-
-/* Links */
-a {
-    color: #37acff;
-    text-decoration: none;
-}
-
-a:hover {
-    text-decoration: underline;
+    margin-bottom: 5px;
 }
 
 /* Footer */
@@ -73,13 +115,43 @@ footer {
 }
 
 /* Responsive Design */
+
+/* Ukuran Tablet (Lebar Maksimum 768px) */
 @media (max-width: 768px) {
+    header {
+        flex-direction: column; /* Teks dan gambar profil bertumpuk */
+        text-align: center;
+        padding: 20px;
+    }
+
+    .header-text {
+        padding-left: 0;
+    }
+
+    .profile-pic {
+        width: 100px;
+        height: 100px;
+    }
+
     header h1 {
         font-size: 2em;
     }
 
     header p {
         font-size: 1em;
+    }
+
+    .education-item {
+        flex-direction: column; /* Gambar dan teks bertumpuk */
+        text-align: center;
+    }
+
+    .edu-img {
+        width: 120px; /* Perkecil gambar pendidikan */
+    }
+
+    .gambar {
+        width: 30px;
     }
 
     section {
@@ -92,13 +164,24 @@ footer {
     }
 }
 
+/* Ukuran HP (Lebar Maksimum 480px) */
 @media (max-width: 480px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
     header h1 {
-        font-size: 1.5em;
+        font-size: 1.8em;
     }
 
     header p {
         font-size: 0.9em;
+    }
+
+    .profile-pic {
+        width: 90px;
+        height: 90px;
     }
 
     section {
@@ -107,6 +190,54 @@ footer {
     }
 
     h2 {
-        font-size: 1.2em;
+        font-size: 1.3em;
     }
+
+    .education-item {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .edu-img {
+        width: 100px;
+    }
+
+    footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 15px;
+    }
+
+    .container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 15px; /* Menambah jarak antar logo */
+        justify-content: center;
+    }
+
+    .gambar {
+        width: 28px; /* Ukuran logo lebih kecil */
+    }
+}
+
+
+/* Animation */
+.gambar {
+    width: 25px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.gambar:hover {
+    transform: scale(1.2); /* Memperbesar 20% */
+}
+
+@keyframes fadeOut {
+    100% { opacity: 1; }  /* Awal Mengilang */
+    0% { opacity: 0; } /* Terlihat sepenuhnya */
+}
+
+header h1 {
+    font-size: 2.5em;
+    animation: fadeOut 3s ease-in forwards; /* Efek fade selama 3 detik, hanya sekali */
 }
