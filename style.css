@@ -115,43 +115,13 @@ footer {
 }
 
 /* Responsive Design */
-
-/* Ukuran Tablet (Lebar Maksimum 768px) */
 @media (max-width: 768px) {
-    header {
-        flex-direction: column; /* Teks dan gambar profil bertumpuk */
-        text-align: center;
-        padding: 20px;
-    }
-
-    .header-text {
-        padding-left: 0;
-    }
-
-    .profile-pic {
-        width: 100px;
-        height: 100px;
-    }
-
     header h1 {
         font-size: 2em;
     }
 
     header p {
         font-size: 1em;
-    }
-
-    .education-item {
-        flex-direction: column; /* Gambar dan teks bertumpuk */
-        text-align: center;
-    }
-
-    .edu-img {
-        width: 120px; /* Perkecil gambar pendidikan */
-    }
-
-    .gambar {
-        width: 30px;
     }
 
     section {
@@ -164,24 +134,13 @@ footer {
     }
 }
 
-/* Ukuran HP (Lebar Maksimum 480px) */
 @media (max-width: 480px) {
-    header {
-        flex-direction: column;
-        text-align: center;
-    }
-
     header h1 {
-        font-size: 1.8em;
+        font-size: 1.5em;
     }
 
     header p {
         font-size: 0.9em;
-    }
-
-    .profile-pic {
-        width: 90px;
-        height: 90px;
     }
 
     section {
@@ -190,37 +149,9 @@ footer {
     }
 
     h2 {
-        font-size: 1.3em;
-    }
-
-    .education-item {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .edu-img {
-        width: 100px;
-    }
-
-    footer {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding: 15px;
-    }
-
-    .container {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 15px; /* Menambah jarak antar logo */
-        justify-content: center;
-    }
-
-    .gambar {
-        width: 28px; /* Ukuran logo lebih kecil */
+        font-size: 1.2em;
     }
 }
-
 
 /* Animation */
 .gambar {
